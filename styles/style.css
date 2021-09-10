@@ -1,3 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  box-sizing: border-box;
+}
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -6,7 +14,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .header {
@@ -14,6 +22,9 @@
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -29,3 +40,79 @@
   margin-right: 0;
   margin-top: 80px;
 }
+/* header */
+.logo_place_header {
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  left: 64px;
+}
+.header__title {
+  max-width: 730px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 700;
+  margin-left: 64px;
+}
+.header__subtitle {
+  max-width: 388px;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.header__main-illustration {
+  position: absolute;
+  z-index: 0;
+  width: 768px;
+  height: 608px;
+  bottom: 0;
+  right: 0;
+}
+.header__square-pic {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
+  z-index: -1;
+}
+/* description */
+.description {
+  padding-top: 100px;
+}
+/* two-columns */
+.two-columns {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.two-columns__brief {
+  width: 175px;
+  color: #2f80ed;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.two-columns__main-text {
+  flex-basis: 80%;
+  min-width: 784px;
+}
+.two-columns__paragraph {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+}
+.two-columns__span-accent {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 700;
+}
+.two-columns__paragraph:not(:last-child) {
+  margin-bottom: 30px;
+}
+/* обращаемся ко всем элементам, кроме последнего */
