@@ -65,7 +65,7 @@ body {
 }
 .header__main-illustration {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   width: 768px;
   height: 608px;
   bottom: 0;
@@ -78,7 +78,7 @@ body {
   width: 568px;
   height: 568px;
   background-color: #2f80ed;
-  z-index: -1;
+  z-index: -2;
 }
 /* description */
 .description {
@@ -112,7 +112,58 @@ body {
   line-height: 34px;
   font-weight: 700;
 }
+
 .two-columns__paragraph:not(:last-child) {
+  /* обращается ко всем элементам, кроме последнего */
   margin-bottom: 30px;
 }
-/* обращаемся ко всем элементам, кроме последнего */
+
+/* digits */
+.digits {
+  padding: 100px 0;
+}
+.section-title {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 20px;
+  /*  для чего пишем width 60% - можно поставить text-align:center и будет по центру */
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.section-subtitle {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.table {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.table__cell {
+  flex-basis: 250px;
+  margin: 30px 0;
+  /* напишите пожалуйста, как лучше делать отступы для этих карточек(я подумал 4 элемента определить в другой блок и уже новому родителю задать отступ) */
+}
+.table__cell > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.table__heading {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.table__text {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+/* обращается ко всем дочерним элементам div, кроме последнего
+если останется только table__heading у него тоже пропадёт отсутп вниз
+*/
