@@ -85,7 +85,7 @@ li {
   color: white;
   margin: 80px 0 0 0;
 }
-.table__cell > div:not(:last-child) {
+.table__cell > p:not(:last-child) {
   margin-bottom: 20px;
 } /* обращается ко всем дочерним элементам div, кроме последнего
 если останется только table__heading у него тоже пропадёт отсутп вниз
