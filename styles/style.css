@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -9,10 +9,10 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-li {
+} */
+/* li {
   list-style: none;
-}
+} */
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -33,7 +33,7 @@ li {
   position: relative;
   display: flex;
   align-items: center;
-  z-index: -2;
+  box-sizing: border-box;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -44,7 +44,6 @@ li {
   width: 568px;
   height: 568px;
   background-color: #2f80ed;
-  z-index: -2;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -53,7 +52,7 @@ li {
   text-align: center;
   width: 60%;
   margin: 0 auto 20px;
-  /*  для чего пишем width 60% - можно поставить text-align:center и будет по центру */
+  /*  для чего пишем width 60% - можно поставить text-align:center и будет по центру - понял, спасибо*/
   font-size: 60px;
   line-height: 1.15;
   font-weight: 700;
@@ -82,28 +81,34 @@ li {
 }
 .table__cell {
   flex-basis: 250px;
-  margin: 30px 0;
-  /* напишите пожалуйста, как лучше делать отступы для этих карточек(я подумал 4 элемента определить в другой блок и уже новому родителю задать отступ) */
+  margin-top: 60px;
+  z-index: 2;
 }
 .table__cell_theme_dark {
   flex-basis: 200px;
   color: white;
   margin: 80px 0 0 0;
 }
-.table__cell > p:not(:last-child) {
+/* .table__cell > p:not(:last-child) {
   margin-bottom: 20px;
-} /* обращается ко всем дочерним элементам div, кроме последнего
+}  */
+/* обращается ко всем дочерним элементам div, кроме последнего
 если останется только table__heading у него тоже пропадёт отсутп вниз
 */
 .table__heading {
   font-size: 24px;
   line-height: 1.15;
   font-weight: 700;
+  margin: 0 0 20px 0;
 }
 .table__text {
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
+  margin: 0 0 20px 0;
+}
+.table__text:last-child {
+  margin: 0 0 0 0;
 }
 /* header */
 .logo_place_header {
@@ -111,13 +116,16 @@ li {
   z-index: 99;
   top: 30px;
   left: 64px;
+  width: 183px;
+  height: 32px;
 }
 .header__title {
   max-width: 730px;
   font-size: 102px;
   line-height: 96px;
   font-weight: 700;
-  margin-left: 64px;
+  margin: 0 0 0 64px;
+  z-index: 3;
 }
 .header__subtitle {
   max-width: 388px;
@@ -127,6 +135,8 @@ li {
   font-size: 18px;
   line-height: 25px;
   font-weight: 400;
+  margin: 0;
+  z-index: 3;
 }
 .header__link {
   color: #2f80ed;
@@ -134,16 +144,17 @@ li {
 }
 .header__main-illustration {
   position: absolute;
-  z-index: -1;
   width: 768px;
   height: 608px;
   bottom: 0;
   right: 0;
+  z-index: 2;
 }
 
 /* description */
 .description {
   padding-top: 100px;
+  box-sizing: border-box;
 }
 /* two-columns */
 .two-columns {
@@ -158,6 +169,7 @@ li {
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
+  margin: 0;
 }
 .two-columns__main-text {
   flex-basis: 80%;
@@ -167,6 +179,7 @@ li {
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
+  margin: 0;
 }
 .two-columns__span-accent {
   font-size: 24px;
@@ -182,16 +195,18 @@ li {
 /* digits */
 .digits {
   padding: 100px 0;
+  box-sizing: border-box;
 }
 /* feynman */
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   background-image: url("../images/feynman.png");
   background-position: bottom left;
   background-size: 867px 637px;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 .feynman__title {
   max-width: 648px;
@@ -207,6 +222,7 @@ li {
   font-size: 36px;
   line-height: 51px;
   font-weight: normal;
+  margin: 0 0 0 0;
 }
 .feynman__link {
   position: absolute;
@@ -229,8 +245,8 @@ li {
   position: relative;
   padding-bottom: 90px;
   background-color: #1f1f1f;
-  z-index: -2;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .kaufman__triangle {
   background-image: url("../images/kaufman-triangle.svg");
@@ -241,11 +257,11 @@ li {
   right: -210px;
   top: 0;
   background-size: cover;
-  z-index: -1;
 }
 /* footer */
 .footer {
   background-color: #1f1f1f;
+  min-height: 350px;
 }
 .footer__columns {
   width: 90%;
@@ -264,11 +280,11 @@ li {
   justify-content: space-between;
 }
 .logo_place_footer {
-  width: 185px;
+  width: 183px;
   height: 35px;
 }
 .footer__author {
-  margin: 18px 0;
+  margin: 18px 0 18px 0;
   color: #fff;
   font-size: 18px;
   line-height: 25px;
@@ -276,14 +292,17 @@ li {
 }
 .footer__column-heading {
   color: #fff;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
 }
 .footer__column-links {
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
+  padding: 0;
+  list-style-type: none;
 }
+
 .footer__column-link {
   text-decoration: none;
   color: #fff;
@@ -291,10 +310,12 @@ li {
   line-height: 30px;
   font-weight: normal;
 }
-.footer__column-link_social {
+.footer__column-link_display_flex {
   display: flex;
   align-items: center;
 }
-.footer__social-link {
+.footer__social-icon {
   margin-right: 10px;
+  width: 16px;
+  height: 16px;
 }
