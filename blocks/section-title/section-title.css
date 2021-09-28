@@ -1,0 +1,9 @@
+.section-title {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto 20px;
+	/*  для чего пишем width 60% - можно поставить text-align:center и будет по центру - понял, спасибо*/
+	font-size: 60px;
+	line-height: 1.15;
+	font-weight: 700;
+}

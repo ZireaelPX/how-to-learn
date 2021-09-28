@@ -1,0 +1,7 @@
+.video {
+	box-sizing: border-box;
+	padding-top: 100px;
+	margin-bottom: -60px;
+	/* position: relative;
+	bottom: -60px; */
+}
