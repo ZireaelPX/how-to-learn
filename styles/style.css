@@ -13,6 +13,15 @@
 /* li {
   list-style: none;
 } */
+/* rotation */
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -34,6 +43,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -44,6 +54,47 @@
   width: 568px;
   height: 568px;
   background-color: #2f80ed;
+  animation: rotation 20s linear 0s infinite normal forwards;
+}
+/* header */
+.logo_place_header {
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  left: 64px;
+  width: 183px;
+  height: 32px;
+}
+.header__title {
+  max-width: 730px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 700;
+  margin: 0 0 0 64px;
+  z-index: 3;
+}
+.header__subtitle {
+  max-width: 388px;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  margin: 0;
+  z-index: 3;
+}
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+.header__main-illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -110,46 +161,6 @@
 .table__text:last-child {
   margin: 0 0 0 0;
 }
-/* header */
-.logo_place_header {
-  position: absolute;
-  z-index: 99;
-  top: 30px;
-  left: 64px;
-  width: 183px;
-  height: 32px;
-}
-.header__title {
-  max-width: 730px;
-  font-size: 102px;
-  line-height: 96px;
-  font-weight: 700;
-  margin: 0 0 0 64px;
-  z-index: 3;
-}
-.header__subtitle {
-  max-width: 388px;
-  position: absolute;
-  bottom: 30px;
-  left: 64px;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 400;
-  margin: 0;
-  z-index: 3;
-}
-.header__link {
-  color: #2f80ed;
-  text-decoration: none;
-}
-.header__main-illustration {
-  position: absolute;
-  width: 765px;
-  height: 608px;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-}
 
 /* description */
 .description {
@@ -191,7 +202,51 @@
   /* обращается ко всем элементам, кроме последнего */
   margin-bottom: 30px;
 }
-
+/* techniques */
+.techniques {
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+/* cards */
+.cards {
+  width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards__item {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+}
+.cards__item:not(:nth-child(3n)) {
+  margin-right: 100px;
+}
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 43px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.cards__title {
+  margin: 0px 0px 16px 0px;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: bold;
+}
+.cards__description {
+  margin: 0px 0px 0px 0px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: normal;
+}
 /* digits */
 .digits {
   padding: 100px 0;
