@@ -1,3 +1,5 @@
+/* normalize */
+@import url(../vendor/normalize.css);
 /* rotation */
 @import url(../blocks/rotation/rotation.css);
 /* page */
@@ -11,18 +13,18 @@
 @import url(../blocks/header/__title/header__title.css);
 /* logo */
 @import url(../blocks/logo/logo.css);
-@import url(../blocks/logo/_place_header/logo_place_header.css);
-@import url(../blocks/logo/_place_footer/logo_place_footer.css);
+@import url(../blocks/logo/_place/_footer/logo_place_footer.css);
+@import url(../blocks/logo/_place/_header/logo_place_header.css);
 /* decription */
 @import url(../blocks/description/description.css);
 /* two-columns */
 @import url(../blocks/two-columns/__brief/two-columns__brief.css);
-@import url(../blocks/two-columns/two-coumns.css);
+@import url(../blocks/two-columns/two-columns.css);
 @import url(../blocks/two-columns/__main-text/two-columns__main-text.css);
 @import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
 @import url(../blocks/two-columns/__span-accent/two-columns__span-accent.css);
-/* techiques */
-@import url(../blocks/techiques/techiques.css);
+/* techniques */
+@import url(../blocks/techniques/techniques.css);
 /* cards */
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/cards/__description/cards__description.css);
